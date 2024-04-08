@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h2 id="resultado">Resultado é : </h2>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button onclick="calculadora('+')">+</button>
+    <button onclick="calculadora('-')">-</button>
+    <button onclick="calculadora('/')">/</button>
+    <button onclick="calculadora('*')">*</button>
+    <script>
+        function calculadora(operador) {
+            n1 = document.getElementById('n1').value;
+            n2 = document.getElementById('n2').value;
+            if (operador == '+') {
+                resultado = Number(n1) + Number(n2);
+            } else if (operador == '-') {
+             resultado = n1 - n2;
+            } else if (operador == '/') {
+                resultado = n1 / n2;
+            } else if (operador == '*') {
+                resultado = n1 * n2;
+            }
+           // alert("Resultado é : " + resultado);
+     document.getElementById('resultado').innerHTML = "Resultado é : "+resultado;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

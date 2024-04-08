@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando Cor </title>
+    <style>
+
+    </style>
+</head>
+
+<body id="fundo">
+    <input type="color" id="paleta" onblur="mudarCor()">
+    <script>
+        function mudarCor() {
+            let cor = document.getElementById('paleta').value
+            let fundo = document.getElementById('fundo');
+            fundo.style.background = cor;
+            
+        }
+    </script>
+</body>
+
+</html>

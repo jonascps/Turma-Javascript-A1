@@ -1,0 +1,23 @@
+<script>
+    // LOOPS
+    let contador = 0;
+   /* while(contador < 5 ){
+        document.write(contador);
+        contador  = contador + 1 ;
+    }*/
+
+    let resposta = "sim";
+    while(resposta == "sim"){
+        menu = prompt('1 - Atendimento 2 - Suporte 3 - financeiro')
+        if(menu == '1'){
+            alert('Atendimento')
+        }else if(menu == '2'){
+            alert('Suporte');
+        }else if (menu == '3'){
+            alert('Financeiro');
+        }else{
+           alert('nenhuma das Opções') 
+        }
+        resposta = prompt("Deseja Continuar?");
+    }
+</script>

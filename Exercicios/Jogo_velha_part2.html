@@ -1,0 +1,47 @@
+<style>
+    .corpo {
+        border: solid black 1px;
+        height: 320px;
+        width: 320px;
+        padding: 10px;
+    }
+
+    .quadrado {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        border: solid black 1px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<div class="corpo">
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(0)" src=""></div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(1)" src=""></div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(2)" src=""> </div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(3)" src=""> </div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(4)" src=""> </div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(5)" src=""> </div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(6)" src=""> </div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(7)" src=""> </div>
+    <div class="quadrado"><img class="posicao" onclick="mostrarvez(8)" src=""> </div>
+</div>
+
+<script>
+    let vez = "bolinha";
+    function mostrarvez(posicao) {
+      
+        listaimagem = document.getElementsByClassName("posicao");
+       
+         if (vez == "bolinha") {
+            listaimagem[posicao].src =  "./imagens/imagensbolinha2.jpeg";
+             vez = "x";
+         } else if (vez == "x") {
+            listaimagem[posicao].src =  "./imagens/x2.jpg";
+             vez = "bolinha";
+         }
+    }
+</script>

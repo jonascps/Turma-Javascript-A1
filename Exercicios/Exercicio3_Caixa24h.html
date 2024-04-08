@@ -1,0 +1,28 @@
+<script>
+   let saldo = 100;
+    let resposta = 'sim';
+    while (resposta == 'sim') {
+
+        menu = prompt('1-Saldo 2-Deposito 3-Saque');
+        if (menu == '1') {
+            alert('Seu Saldo e : ' + saldo);
+        } else if (menu == '2') {
+            let deposito = Number(prompt('Insira o valor de deposito'));
+            if (deposito > 2000 && deposito <= 0) {
+                alert('Deposito inválido')
+            } else {
+                saldo = deposito + saldo
+            }
+        } else if (menu == '3') {
+            let saque = Number(prompt('Insira o valor do saque'));
+            if(saque > saldo){
+                alert('saldo insuficiente')
+            }else{
+                saldo = saldo - saque;
+            } 
+        } else {
+            alert('Digite opcao valida')
+        }
+        resposta = prompt('Deseja continuar?')
+    }
+</script>

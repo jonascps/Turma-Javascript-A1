@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mosquito {
+            position: absolute;
+        }
+
+        .tamanho1 {
+            width: 30px;
+        }
+
+        .tamanho2 {
+            width: 50px;
+        }
+
+        .tamanho3 {
+            width: 80px;
+        }
+
+        .placar {
+            border: solid black 1px;
+            border-radius: 15px;
+            width: 60px;
+            height: 38px;
+        }
+
+        #contador {
+            position: relative;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        body {
+            background: url('./fundo.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+
+<body id="corpo">
+    <div class="placar">
+        <div id="contador"></div>
+    </div>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script src="./logica.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<style>
+    .quadrado {
+        height: 150px;
+        width: 150px;
+        border: solid red 1px
+    }
+</style>
+
+<div class="quadrado"></div>
+<input type="range" min="1" max="100" step="10" value="1" id="arredondar">
+<script src="./jquery-3.7.0.min.js"></script>
+<script>
+    $('#arredondar').click(function () {
+        $('.quadrado').css('border-radius', $('#arredondar').val() + 'px');
+
+    })
+
+
+</script>

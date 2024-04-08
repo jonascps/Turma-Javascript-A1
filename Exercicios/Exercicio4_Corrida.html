@@ -1,0 +1,17 @@
+<input id="valor" type="number" step="10" onclick="moverCarro()">
+<img src="./largada.jfif" width="150">
+<img id="meucarro" src="./carro.jfif" width="150" style="position: absolute ; ">
+<img src="./chegada.jpg" width="150" style="margin-left: 400px">
+
+<script>
+    function moverCarro() {
+        valor = document.getElementById('valor').value;
+        carro = document.getElementById('meucarro');
+        if (valor > 270) {
+            alert('Você chegou!');
+        } else {
+            carro.style.marginLeft = valor;
+        }
+    }
+
+</script>

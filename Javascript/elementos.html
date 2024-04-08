@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1em;
+    }
+
+
+      div#campo{
+        width: 300px;
+        height: 200px;
+        background: green;
+        line-height: 200px;
+        text-align: center;
+        margin: auto;
+        margin-top: 100px;
+     
+
+      }  
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="campo">
+
+
+        &#128540
+
+
+    </div>
+   
+    <script>
+
+
+        var cp = window.document.getElementById('campo')
+
+        cp.addEventListener('click', clicar)
+        cp.addEventListener('mouseenter', ponteiro_entrou)
+        cp.addEventListener('mouseout', sair)
+        cp.addEventListener('mousemove',move)
+
+        function clicar(){
+            cp.innerText = 'Clicou'
+            cp.style.background= 'yellow'
+            
+        }
+
+        function ponteiro_entrou(){
+            cp.innerText= 'ponteiro esta dentro e a cor vermelha'
+            cp.style.background='red'
+
+        }
+
+        function sair(){
+            cp.innerText='Ponteiro saiu'
+            
+            
+            cp.style.background='blue'
+            
+        }
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

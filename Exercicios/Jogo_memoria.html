@@ -1,0 +1,116 @@
+<style>
+    .card {
+        display: inline-block;
+        padding: 8px;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+</style>
+<script src="./jquery-3.7.0.min.js"></script>
+<h1> Resultado: <label id="mensagem"></label></h1>
+<div class="blocos">
+    <div class="card bloco-1">
+        <img class="cartao1" src="./imagens/cartao.png" style="width: 100px; height: 120px;">
+        <img class="img1" src="./imagens/caminhao.jpg" style="width: 100px; height: 120px;">
+    </div>
+    <div class="card bloco-2">
+        <img class="cartao2" src="./imagens/cartao.png" style="width: 100px; height: 120px;">
+        <img class="img2" src="./imagens/carro.jpg" style="width: 100px; height: 120px;">
+    </div>
+    <div class="card bloco-3">
+        <img class="cartao3" src="./imagens/cartao.png" style="width: 100px; height: 120px;">
+        <img class="img3" src="./imagens/caminhao.jpg" style="width: 100px; height: 120px;">
+    </div>
+    <div class="card bloco-4">
+        <img class="cartao4" src="./imagens/cartao.png" style="width: 100px; height: 120px;">
+        <img class="img4" src="./imagens/carro.jpg" style="width: 100px; height: 120px;">
+    </div>
+</div>
+<script>
+
+    function esconder() {
+        $('.img1').hide();
+        $('.img2').hide();
+        $('.img3').hide();
+        $('.img4').hide();
+    }
+
+    function mostrar() {
+        $('.cartao1').show();
+        $('.cartao2').show();
+        $('.cartao3').show();
+        $('.cartao4').show();
+    }
+    function esconder2() {
+        $('.cartao1').hide();
+        $('.cartao2').hide();
+        $('.cartao3').hide();
+        $('.cartao4').hide();
+    }
+    esconder2();
+
+    setInterval(function () {
+        mostrar();
+        esconder();
+       
+    }, 2000) //milisegundos
+
+
+    $('.bloco-1').click(
+        function () {
+            $('.img1').show();
+            $('.cartao1').hide();
+            verificar('caminhao')
+        }
+    )
+    $('.bloco-2').click(
+        function () {
+
+            $('.img2').show();
+            $('.cartao2').hide();
+            verificar('carro')
+        }
+    )
+    $('.bloco-3').click(
+        function () {
+
+            $('.img3').show();
+            $('.cartao3').hide();
+            verificar('caminhao')
+        }
+    )
+    $('.bloco-4').click(
+        function () {
+
+            $('.img4').show();
+            $('.cartao4').hide();
+            verificar('carro')
+        }
+    )
+    let click1 = "";
+    let click2 = "";
+    let qtdclick = 1;
+    function verificar(valor) {
+        if (qtdclick == 1) {
+            click1 = valor;
+            qtdclick++;
+        } else {
+            click2 = valor;
+            if (click1 == click2) {
+                //  <h1> Resultado: <label id="mensagem"></label></h1>
+                $('#mensagem').html("Acertou");
+
+            } else {
+                $('#mensagem').html("Errou");
+                setInterval(function () {
+                    mostrar();
+                    esconder();
+                }, 1000) //milisegundos
+
+            }
+            qtdclick = 1;
+        }
+    }
+</script>

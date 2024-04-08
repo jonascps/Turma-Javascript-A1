@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exericio</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border: solid black 1px;
+        }
+
+        .jogo-velha {
+            height: 320px;
+            width: 320px;
+
+            padding: 10px;
+        }
+
+        img {
+
+            margin-left: 25%;
+            margin-top: 25%;
+            height: 50px;
+            width: 50px;
+            position: inherit;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jogo-velha">
+        <div class="caixa"><img class="imagem" onclick="colocarImg(0)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(1)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(2)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(3)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(4)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(5)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(6)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(7)" src=""></div>
+        <div class="caixa"><img class="imagem" onclick="colocarImg(8)" src=""></div>
+    </div>
+    <script>
+        item = 1;
+        caixa = document.getElementsByClassName('caixa')
+        imagem = document.getElementsByClassName('imagem')
+        console.log(caixa[0]);
+        function colocarImg(posicao) {
+            if(item == 2 ){
+                imagem[posicao].src = "x.jpg";
+                item = 1;
+            }else{
+                imagem[posicao].src = "circulo.png";
+                item = 2;
+            }
+          
+           
+        }
+    </script>
+</body>
+
+</html>

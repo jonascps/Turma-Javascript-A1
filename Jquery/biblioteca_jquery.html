@@ -1,0 +1,15 @@
+<p>Número 1 <input type="number" id="numero1"> </p>
+<p>Número 2 <input type="number" id="numero2"> </p>
+<button type="button" id="botao"> Calcular</button>
+
+
+<script src="./jquery-3.7.0.min.js"></script>
+<script>
+    $('button')
+    
+    $('#botao').click(function () {
+        alert(Number($('#numero1').val()) + Number($('#numero2').val()));
+    }
+    )
+
+</script>
